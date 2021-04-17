@@ -158,16 +158,17 @@ SELECT * FROM Results
 */
 
 /* [ 3. simple SQL query ]*/
-a. SELECT name, country FROM Constructors where races_entered>=100;
-b. SELECT name, engine, races_entered from Constructors where (height!=95 and width<180) ORDER BY engine, races_entered;
+a. SELECT constructor, country FROM Constructors where races_entered>=100;
+b. SELECT constructor, engine, races_entered from Constructors where (height!=95 and width<180) ORDER BY engine, races_entered;
 c. SELECT constructor from Constructors where engine='Ferrari';
 d. SELECT driver as newBoys from Drivers where birthday>='1980-01-01';
 e. SELECT driver,Race from Results where race_rank='first place';
 f. SELECT * from Races where area='Europe' ORDER BY Name;
-g. SELECT driver from Drivers where driver='H%';
-h. SELECT constructor from Constructors where constructor='_% _%';
+g. SELECT driver from Drivers where driver like 'H%';
+h. SELECT constructor from Constructors where constructor like '_% _%';
 
 /* [ 4.  sql query ] */
-a. SELECT driver from Drivers as D, Constructors as C where (C.constructor=D.constructor and C.country='Italian')
-b. SELECT driver from Constructors as C, Drivers as D where (C.country=D.country and C.constructor=D.constructor)
+a. SELECT D.driver from Drivers as D, Constructors as C where (C.country='Italian' and C.constructor=D.constructor);
+b. SELECT D.driver from Constructors as C, Drivers as D where (C.country=D.country and C.constructor=D.constructor);
 c. SELECT 
+d. 
