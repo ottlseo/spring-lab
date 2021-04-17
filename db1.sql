@@ -24,7 +24,7 @@ CREATE TABLE Races (
     beginDate DATE,
     area varchar(20),
 
-    primary key (Name),
+    primary key (Name)
 )
 CREATE TABLE Results (
     Race varchar(20),
