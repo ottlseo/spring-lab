@@ -56,7 +56,7 @@ values
 ('Red bull','Austrian','Honda', 304, 91, 175),
 ('Honda','Japanese','Honda', 88, 91, 175),
 ('Toro Rosso','Italian','Ferrari', 268, 93, 180),
-('Jaguar','British','Cosworth', 85, 93, 178)
+('Jaguar','British','Cosworth', 85, 93, 178);
 
 INSERT INTO Drivers 
 values 
@@ -72,12 +72,12 @@ values
 ('vettel','03/07/1987','German','Toro Rosso'),
 ('barrichello','23/05/1972','Brazilian','Honda'),
 ('Irvine','10/11/1965','British','Jaguar'),
-('Schmacher','03/01/1969','German','Ferrari')
+('Schmacher','03/01/1969','German','Ferrari');
 
 INSERT INTO Races
 values 
 ('Australian Grand Prix','2009-03-29','Australia'),
-('British Grand Prix','2009-06-21','Europe')
+('British Grand Prix','2009-06-21','Europe'),
 ('German Grand Prix ','2009-06-21','Europe'),
 ('European Grand Prix','2009-08-23','Europe'),
 ('Abu Dhabi Grand Prix','2009-11-01','Middle East'),
@@ -90,7 +90,7 @@ values
 ('United States Grand Prix','2007-06-17','North America'),
 ('French Grand Prix','2007-07-01','Europe'),
 ('Italian Grand Prix','2007-09-09','Europe'),
-('San Marino Grand Prix','2004-04-25','Europe')
+('San Marino Grand Prix','2004-04-25','Europe');
 
 
 INSERT INTO Results
@@ -148,7 +148,7 @@ values
 ('Italian Grand Prix','alonso','second place'),
 
 ('San Marino Grand Prix','Schmacher','first place'),
-('San Marino Grand Prix','barrichello','second place')
+('San Marino Grand Prix','barrichello','second place');
 
 /* 결과 보기
 SELECT * FROM Constructors
