@@ -9,7 +9,7 @@ CREATE TABLE Constructors (
     width INT,
 
     primary key (constructor)
-)
+);
 CREATE TABLE Drivers (
     driver varchar(20),
     birthday DATE,
@@ -17,24 +17,24 @@ CREATE TABLE Drivers (
     constructor varchar(20),
 
     primary key (driver),
-    foreign key (constructor) references Constructors
-)
+    foreign key (constructor) references Constructors(constructor)
+);
 CREATE TABLE Races (
     Name varchar(30),
     beginDate DATE,
     area varchar(20),
 
     primary key (Name)
-)
+);
 CREATE TABLE Results (
-    Race varchar(20),
+    Race varchar(30),
     driver varchar(20),
     race_rank varchar(20),
 
     primary key (Race, driver),
-    foreign key (Race) references Races,
-    foreign key (driver) references Drivers
-)
+    foreign key (Race) references Races(Name),
+    foreign key (driver) references Drivers(driver)
+);
 
 /* 결과 보기
 DESCRIBE Constructors
@@ -158,14 +158,14 @@ SELECT * FROM Results
 */
 
 /* [ 3. simple SQL query ]*/
-a. SELECT name, country FROM Constructors where races_entered>=100
-b. SELECT name, engine, races_entered from Constructors where (height!=95 and width<180) ORDER BY engine, races_entered
-c. SELECT constructor from Constructors where engine='Ferrari'
-d. SELECT driver as newBoys from Drivers where birthday>='1980-01-01'
-e. SELECT driver,Race from Results where race_rank='first place'
-f. SELECT * from Races where area='Europe' ORDER BY Name
-g. SELECT driver from Drivers where driver='H%'
-h. SELECT constructor from Constructors where constructor='_% _%'
+a. SELECT name, country FROM Constructors where races_entered>=100;
+b. SELECT name, engine, races_entered from Constructors where (height!=95 and width<180) ORDER BY engine, races_entered;
+c. SELECT constructor from Constructors where engine='Ferrari';
+d. SELECT driver as newBoys from Drivers where birthday>='1980-01-01';
+e. SELECT driver,Race from Results where race_rank='first place';
+f. SELECT * from Races where area='Europe' ORDER BY Name;
+g. SELECT driver from Drivers where driver='H%';
+h. SELECT constructor from Constructors where constructor='_% _%';
 
 /* [ 4.  sql query ] */
 a. SELECT driver from Drivers as D, Constructors as C where (C.constructor=D.constructor and C.country='Italian')
