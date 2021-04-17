@@ -170,5 +170,9 @@ h. SELECT constructor from Constructors where constructor like '_% _%';
 /* [ 4.  sql query ] */
 a. SELECT D.driver from Drivers as D, Constructors as C where (C.country='Italian' and C.constructor=D.constructor);
 b. SELECT D.driver from Constructors as C, Drivers as D where (C.country=D.country and C.constructor=D.constructor);
-c. SELECT 
+c. SELECT R.driver, C.engine, C.races_entered FROM Results as R, Drivers as D, Constructors as C where (R.Race='Monaco Grand Prix' and R.driver=D.driver and D.constructor=C.constructor);
 d. 
+e. SELECT distinct(D.driver) from Drivers as D, Results as R where (R.driver=D.driver and R.Race='Spanish Grand Prix' or D.constructor='BMW Sauber');
+f. select D.driver, C.races_entered from Drivers as D, Constructors as C where (D.constructor=C.constructor) order by races_entered, driver desc;
+g.
+h.
