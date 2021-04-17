@@ -60,19 +60,19 @@ values
 
 INSERT INTO Drivers 
 values 
-('hamilton','07/01/1985','British','McLaren'),
-('heidfeld','10/05/1977','German','BMW Sauber'),
-('alonso','29/07/1981','Spanish','Renault'),
-('raikkonen','17/10/1979','Finnish','Ferrari'),
-('kubica','07/12/1984','Polish','BMW Sauber'),
-('massa','25/04/1981','Brazilian','Ferrari'),
-('trulli','13/07/1974','Italian','Toyota'),
-('webber','27/08/1976','Australian','Red Bull'),
-('button','19/01/1980','British','Honda'),
-('vettel','03/07/1987','German','Toro Rosso'),
-('barrichello','23/05/1972','Brazilian','Honda'),
-('Irvine','10/11/1965','British','Jaguar'),
-('Schmacher','03/01/1969','German','Ferrari');
+('hamilton','1985-01-07','British','McLaren'),
+('heidfeld','1977-05-10','German','BMW Sauber'),
+('alonso','1981-07-29','Spanish','Renault'),
+('raikkonen','1979-10-17','Finnish','Ferrari'),
+('kubica','1984-12-07','Polish','BMW Sauber'),
+('massa','1981-04-25','Brazilian','Ferrari'),
+('trulli','1974-07-13','Italian','Toyota'),
+('webber','1976-08-27','Australian','Red Bull'),
+('button','1980-01-19','British','Honda'),
+('vettel','1987-07-03','German','Toro Rosso'),
+('barrichello','1972-05-23','Brazilian','Honda'),
+('Irvine','1965-11-10','British','Jaguar'),
+('Schmacher','1969-01-03','German','Ferrari');
 
 INSERT INTO Races
 values 
