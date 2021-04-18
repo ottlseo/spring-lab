@@ -4,9 +4,5 @@ SELECT R.driver, C.engine, C.races_entered FROM Results as R, Drivers as D, Cons
 SELECT constructor from Drivers group by constructor having count(driver)=1;
 SELECT distinct(D.driver) from Drivers as D, Results as R where (R.driver=D.driver and R.Race='Spanish Grand Prix' or D.constructor='BMW Sauber');
 SELECT D.driver, C.races_entered from Drivers as D, Constructors as C where (D.constructor=C.constructor) order by races_entered, driver desc;
-
-g. (select country from Constructors where engine='Cosworth') intersect (select country from Constructors where engine='Mercedes');
-h. (select driver from Results where race_rank="first place") intersect (select driver from Results where race_rank!="first place")
-/* MySQL에는 intersect 명령어가 없으므로 inner join을 써준다 */
-g. 
-h.
+select c1.country from constructors c1 INNER JOIN constructors c2 ON c2.country=c1.country AND c2.engine='Mercedes' WHERE c1.engine='Cosworth';
+select distinct(r1.driver) from results r1 INNER JOIN results r2 ON r1.driver=r2.driver AND r1.race_rank='first place' WHERE r2.race_rank!='first place';
