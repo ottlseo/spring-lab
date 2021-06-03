@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="efub.ebs.ebs01.dao.ContentsDAO">
+    <!--namespace를 통해 UserDAO와 연결합니다. -->
+
+    <select id="selectContents" parameterType="efub.ebs.ebs01.dto.ContentsDTO"
+            resultType="efub.ebs.ebs01.dto.ContentsDTO">
+<!-- selectContents() 메서드를 호출하면 실행할 SELECT문. UserDTO 객체를 파라미터로 받아, UserDTO객체를 반환합니다.-->
+        SELECT * FROM contents;
+    </select>
+
+    <select id="selectContentsById" parameterType="int"
+            resultType="efub.ebs.ebs01.dto.ContentsDTO">
+<!-- selectContentsById() 메서드를 호출하면 실행할 SELECT문. int 정수(id)를 파라미터로 받아,DTO객체를 반환합니다.-->
+        SELECT * FROM contents WHERE id = #{id};
+    </select>
+</mapper>
