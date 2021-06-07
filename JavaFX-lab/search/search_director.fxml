@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="search.Controller">
+   <children>
+      <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="감독으로 검색하기" wrappingWidth="344.46246337890625">
+                     <font>
+                        <Font name="Malgun Gothic" size="40.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="감독 이름">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="value" alignment="CENTER" prefHeight="30.0" prefWidth="300.0" />
+               </children>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="result2" alignment="CENTER" mnemonicParsing="false" onAction="#printDirector" prefHeight="50.0" prefWidth="400.0" text="검색하기">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Malgun Gothic" size="26.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <Button fx:id="menu" mnemonicParsing="false" onAction="#goMenu" text="메뉴로 돌아가기">
+               <font>
+                  <Font name="LG PC" size="16.0" />
+               </font></Button>
+         </children>
+   </VBox>
+   </children>
+</StackPane>

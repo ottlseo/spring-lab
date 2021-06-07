@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="watchagain.Controller">
+   <children>
+      <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="42.0" prefWidth="400.0">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="수상 부문 별로 보기">
+                     <font>
+                        <Font name="Malgun Gothic" size="36.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="30.0" top="20.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="95.0" prefWidth="400.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="300.0" prefWidth="150.0">
+                     <children>
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#awardType" prefHeight="30.0" prefWidth="400.0" text="작품상">
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="LG PC" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#awardType" prefHeight="30.0" prefWidth="300.0" text="남우주연상">
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="LG PC" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="30.0" prefWidth="300.0" text="각본상">
+                           <font>
+                              <Font name="LG PC" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#awardType" prefHeight="30.0" prefWidth="300.0" text="뉴 커런츠상">
+                           <font>
+                              <Font name="LG PC" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#awardType" prefHeight="30.0" prefWidth="300.0" text="신인여우상">
+                           <font>
+                              <Font name="LG PC" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="264.0" prefWidth="146.0">
+                     <children>
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#awardType" prefHeight="30.0" prefWidth="300.0" text="여우주연상">
+                           <VBox.margin>
+                              <Insets bottom="30.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="LG PC" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#awardType" prefHeight="30.0" prefWidth="300.0" text="여우조연상">
+                           <VBox.margin>
+                              <Insets bottom="30.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="LG PC" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#awardType" prefHeight="30.0" prefWidth="300.0" text="황금사자상">
+                           <font>
+                              <Font name="LG PC" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="30.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#awardType" prefHeight="30.0" prefWidth="300.0" text="황금 종려상">
+                           <font>
+                              <Font name="LG PC" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="menu" layoutX="264.0" layoutY="7.0" mnemonicParsing="false" onAction="#goMenu" text="메뉴로 돌아가기">
+                     <font>
+                        <Font name="LG PC" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

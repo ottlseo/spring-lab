@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="category.Controller">
+   <children>
+      <Pane prefHeight="73.0" prefWidth="400.0">
+         <children>
+            <Text layoutX="93.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="카테고리별 영화 보기" textAlignment="CENTER">
+               <font>
+                  <Font name="LG PC" size="29.0" />
+               </font></Text>
+         </children>
+      </Pane>
+      <VBox alignment="TOP_CENTER" prefHeight="232.0" prefWidth="400.0">
+         <children>
+            <Button fx:id="genre" alignment="CENTER" mnemonicParsing="false" onAction="#goGenre" text="장르별" textAlignment="CENTER">
+               <font>
+                  <Font name="LG PC" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#commercial" text="상업" textAlignment="CENTER">
+               <font>
+                  <Font name="LG PC" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#independent" text="독립" textAlignment="CENTER">
+               <font>
+                  <Font name="LG PC" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <Button fx:id="menu" mnemonicParsing="false" onAction="#goMenu" text="메뉴로 돌아가기">
+         <font>
+            <Font name="LG PC" size="16.0" />
+         </font></Button>
+   </children>
+</VBox>

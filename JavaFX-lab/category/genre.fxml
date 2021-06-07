@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="category.Controller">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="10.0" prefWidth="100.0">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="장르별">
+                     <font>
+                        <Font name="Malgun Gothic" size="36.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#genre" prefHeight="20.0" prefWidth="300.0" text="스릴러">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="LG PC" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#genre" prefHeight="20.0" prefWidth="300.0" text="로맨틱 코미디">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="LG PC" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#genre" prefHeight="20.0" prefWidth="300.0" text="범죄">
+                     <font>
+                        <Font name="LG PC" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#genre" prefHeight="20.0" prefWidth="300.0" text="드라마">
+                     <font>
+                        <Font name="LG PC" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#genre" prefHeight="20.0" prefWidth="300.0" text="전쟁">
+                     <font>
+                        <Font name="LG PC" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#genre" prefHeight="20.0" prefWidth="300.0" text="모험">
+                     <font>
+                        <Font name="LG PC" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#genre" prefHeight="20.0" prefWidth="300.0" text="로맨스">
+                     <font>
+                        <Font name="LG PC" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="menu" alignment="BOTTOM_CENTER" layoutX="280.0" layoutY="4.0" mnemonicParsing="false" onAction="#goMenu" text="메뉴로 돌아가기">
+                     <font>
+                        <Font name="LG PC" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</StackPane>
