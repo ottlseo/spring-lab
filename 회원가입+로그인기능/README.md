@@ -1,6 +1,6 @@
 # 회원가입+로그인 기능 구현(spring security)
 ## 1. JPA와 Mysql 연동하기
-application.properties
+application.properties 파일
 ```
 # MySQL 을 사용할 것.
 spring.jpa.database=mysql
@@ -18,6 +18,21 @@ spring.jpa.database-platform=org.hibernate.dialect.MySQL5InnoDBDialect
 
 # 사용되는 SQL 콘솔창에 출력
 spring.jpa.show-sql=true
+
+```
+🎈 .yml 파일인 경우
+```
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://codic-db.cfgbs9nzcfco.ap-northeast-2.rds.amazonaws.com/codicdb
+    username: codic
+    password: qwer1234
+  jpa:
+    database: mysql
+    show-sql: true
+    generate-ddl: true
+    ddl-auto: update
 
 ```
 ## 2. SpringSecurity가 제공하는 함수 override하여 구성
