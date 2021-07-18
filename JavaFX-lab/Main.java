@@ -24,14 +24,7 @@ public class Main extends Application {
     public static void main(String[] args) {
 
         System.out.println("Connecting to database...");
-        // try (
-        //     Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
-        //     Statement stmt = conn.createStatement();
-        //     ) {
-        //     stmt.executeQuery("use cinema");
-        // } catch(SQLException se) {
-        //     se.printStackTrace();
-        // }
+        
         launch(args);
     }
 }
