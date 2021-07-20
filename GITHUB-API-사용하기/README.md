@@ -257,7 +257,7 @@ public long commit_count_test(GithubInfoDto githubInfoDto) { ... }
 컨트롤러에서 **GetMapping** 방식 대신,   
 **@RequestMapping**으로 변경한 후, **@ResponseBody** 어노테이션을 추가해주면 된다.
 
-## ⇒ 성공!!! 😍
+### ⇒ 성공!!! 😍
 
 ![image](https://user-images.githubusercontent.com/61778930/126288363-67a46026-f016-4a62-abf5-e3474e5bf422.png)
 
