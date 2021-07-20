@@ -15,13 +15,6 @@ https://api.github.com/repos/EWHACODIC/back-end/stats/punch_card
 - 0-23: Hour of day
 - Number of commits
 
-```java
-https://api.github.com/repos/EWHACODIC/back-end/stats/punch_card
-
-https://api.github.com/repos/EWHACODIC/back-end/stats/punch_card
-?since=2021-07-01T00:00:00Z&until=2021-07-08T23:59:59Z&author=ottl-seo
-```
-
 
 ```java
 [
