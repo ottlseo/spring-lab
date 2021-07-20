@@ -3,8 +3,7 @@ import ewhacodic.demo.dto.GithubInfoDto;
 import ewhacodic.demo.service.GithubInfoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,7 +14,8 @@ public class GithubInfoController {
     private final GithubInfoService githubInfoService;
 
     //테스트용
-    @GetMapping(value = "/api/commit_count_test")
+    @RequestMapping(value = "/api/commit_count_test", method = RequestMethod.GET)
+    @ResponseBody
     public long commit_count_test(GithubInfoDto githubInfoDto) {
 
         //임의로 상황 설정해줌
@@ -23,8 +23,9 @@ public class GithubInfoController {
         githubInfoDto.setRepoName("Algorithm");
         githubInfoDto.setStartDate("2021-07-01T00:00:00Z");
             //CurrentDate는 자동 생성
+        githubInfoDto.setCurrentDate("2021-07-20T00:00:00Z");
 
-        Long commits = githubInfoService.CommitCount(githubInfoDto);
+        long commits = githubInfoService.CommitCount(githubInfoDto);
         return commits;
     }
 }
