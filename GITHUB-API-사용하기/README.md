@@ -1,6 +1,6 @@
 # github api로 한 주 커밋 수 가져오기
 
-## �API 설명
+## API 설명
 
 **[매일 시간당 커밋 수 가져 오기](https://docs.github.com/en/rest/reference/repos#get-the-hourly-commit-count-for-each-day)**   
 [GET] /repos/{owner}/{repo}/stats/punch_card   
