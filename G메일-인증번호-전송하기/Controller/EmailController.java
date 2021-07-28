@@ -28,40 +28,15 @@ public class EmailController {
 
     private final EmailService emailService;
 
-    @PostMapping("/send")
-    public String sendEmail(@RequestBody EmailDto email) throws Exception {
-        String id = URLEncoder.encode(email.getId() , "UTF-8"); //id가 null
-        try{
-            String addr = id+"@ewhain.net";
-            emailService.sendSimpleMessage(addr);
-            return "true";
-        } catch (Exception e){
-            return email.getId();
-        }
-    }
-    /*
     @PostMapping("/verify")
-    public ResponseEntity<ResponseDto> verifyCode(@RequestBody EmailCodeDto code) {
-        Long userId = emailService.getUserIdByCode(code.getCode());
-        return ResponseEntity.ok(ResponseDto.of(HttpStatus.OK, EMAIL_AUTH_SUCCESS, jwtIssueService.createAccessToken(new JwtPayload(userId))));
-    }
-    @RequestMapping(value = "/email", method = {RequestMethod.GET, RequestMethod.POST}) // 이메일 인증 코드 보내기
-    public boolean emailAuth(@PathVariable("id") String id) throws Exception {
-        String email = id+"@ewhain.net";
-        emailService.sendSimpleMessage(email);
-
-        return true;
-    }
-
-    @PostMapping("/verifyCode/{code}") // 이메일 인증 코드 검증
-    public boolean verifyCode(@PathVariable("code") String code) {
-        if(EmailService.ePw.equals(code)) {
-            return true;
+    public String sendEmail(@RequestBody String id) throws Exception {
+        String addr = id+"@ewhain.net";
+        String code = emailService.createKey(); //인증코드 생성
+        try{
+            emailService.sendSimpleMessage(addr, code); //코드 보내주고
+        } catch (Exception e){
+            e.printStackTrace();
         }
-        else{
-            return false;
-        }
+        return code; //코드 프론트로 보내주기 -> 프론트에서 입력받은 값과 비교하여 인증
     }
-
-     */
 }
