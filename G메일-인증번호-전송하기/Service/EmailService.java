@@ -23,8 +23,8 @@ public class EmailService {
     public static final String ePw = createKey();
 
     private MimeMessage createMessage(String to)throws Exception{
-        logger.info("보내는 대상 : "+ to);
-        logger.info("인증 번호 : " + ePw);
+        logger.info(to);
+        logger.info(ePw);
         MimeMessage message = emailSender.createMimeMessage();
 
         try {
@@ -42,7 +42,7 @@ public class EmailService {
             msg += "<a href=\"https://slack.com\" style=\"text-decoration: none; color: #434245;\" rel=\"noreferrer noopener\" target=\"_blank\">Slack Clone Technologies, Inc</a>";
 
             message.setText(msg, "utf-8", "html"); //내용
-            message.setFrom(new InternetAddress("보내는 계정", "ewha-codic")); //보내는 사람
+            message.setFrom(new InternetAddress("dotsizenobia@gmail.com", "ewha-codic")); //보내는 사람
         } catch (UnsupportedEncodingException e) {
             logger.error("Exception raised while sending message to " + to, e);
         }
