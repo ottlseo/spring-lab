@@ -20,16 +20,14 @@ public class EmailService {
 
     private final JavaMailSender emailSender;
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
-    public static final String ePw = createKey();
 
-    private MimeMessage createMessage(String to)throws Exception{
+    private MimeMessage createMessage(String to, String code)throws Exception{
         logger.info(to);
-        logger.info(ePw);
+        logger.info(code);
 
         MimeMessage message = emailSender.createMimeMessage();
 
         try {
-            String code = createCode(ePw);
             message.addRecipients(MimeMessage.RecipientType.TO, to); //보내는 대상
             message.setSubject("이화코딕 가입을 위한 인증 코드"); //제목
 
@@ -49,18 +47,18 @@ public class EmailService {
     }
 
     // 인증코드 만들기
-    public static String createKey() {
+    public String createKey() {
         StringBuffer key = new StringBuffer();
         Random rnd = new Random();
 
-        for (int i = 0; i < 6; i++) { // 인증코드 6자리
+        for (int i = 0; i < 6; i++) {
             key.append((rnd.nextInt(10)));
         }
         return key.toString();
     }
 
-    public void sendSimpleMessage(String to)throws Exception {
-        MimeMessage message = createMessage(to);
+    public void sendSimpleMessage(String to, String code)throws Exception {
+        MimeMessage message = createMessage(to, code);
         try{//예외처리
             emailSender.send(message);
         }catch(MailException es){
@@ -69,7 +67,4 @@ public class EmailService {
         }
     }
 
-    public String createCode(String ePw){
-        return ePw.substring(0, 6);
-    }
 }
