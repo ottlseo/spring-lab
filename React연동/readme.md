@@ -20,6 +20,8 @@ bootJar{
 ```
 java -jar ebs-final.jar
 ```
+EC2 서버에서 실행하면 배포 ok   
+무중단 배포하려면 nohup 명령어 사용
 
 ### Reference
 [react-spring 개발환경 합치기](https://joshua-dev-story.blogspot.com/2020/01/react-spring-2.html)
