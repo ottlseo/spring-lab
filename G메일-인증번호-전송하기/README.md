@@ -217,9 +217,10 @@ mail.smtp.ssl.enable=true
 
 너무 감격스러워서 캡쳐
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7816cb89-1fdf-4947-aca7-c5631c48197f/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7816cb89-1fdf-4947-aca7-c5631c48197f/Untitled.png)
+![Untitled (5)](https://user-images.githubusercontent.com/61778930/145048293-38ccab98-1365-4577-91b3-8a4a6a86a35a.png)
 
 ### references
+
 https://gist.github.com/ihoneymon/56dd964336322eea04dc    
 https://offbyone.tistory.com/167   
 https://victorydntmd.tistory.com/342   
