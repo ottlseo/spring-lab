@@ -258,13 +258,13 @@ public long commit_count_test(GithubInfoDto githubInfoDto) { ... }
 
 ---
 
-### 이제 해야 할 일
+### 이후 해야 할 일
 
 - [ ]  `LocalDateTime.now()` 활용하여 현재 시간까지의 커밋 수 가져오도록 **Service** 앞부분 수정 (*Easy*)
 (지금은 *startDate*, *currentDate* 모두 임의로 넣어줬음)
 
-- [ ]  **Repository** 만들어서, 커밋 수를 유저 번호와 함께 DB에 저장하도록 (*Hard*)
-- [ ]  **Controller**도 user 정보에 맞게 URI 수정 (*Easy*?)
+- [x]  **Repository** 만들어서, 커밋 수를 유저 번호와 함께 DB에 저장하도록 (*Hard*)
+- [x]  **Controller**도 user 정보에 맞게 URI 수정 (*Easy*?)
 
 ```java
 @getMapping(/api/commits/{userName})
@@ -277,16 +277,4 @@ public long commitCount(@PathVariable("userName") String userName){
 
 - [ ]  DB 조회하여 랭킹 계산하는 **Service** 만들기 (*Hard*)
 
-
----
-
-## OAuth2
-
-→ 구글 아이디로 로그인, 깃허브 아이디로 로그인 등
-
-(토큰을 이용해서 로그인 정보 저장해주는 것)
-
-### ⇒ 우리는 구현할 필요 없다고 생각됨
-
-https://github.com/cheese10yun/springboot-oauth2
 
